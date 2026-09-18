@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "alias": "example",
+  "role": "dev",
+  "agent": "claude-code",
+  "windowDays": 30,
+  "sessionCount": 120,
+  "tokens": { "input": 90000000, "output": 12000000, "total": 102000000 },
+  "workTypeBreakdown": {
+    "plan_design": 20, "build_feature": 40, "debug_fix": 20,
+    "improve_quality": 12, "analyze_data": 5, "prototype": 2, "write_docs": 1
+  },
+  "models": { "opus": 80, "sonnet": 40 },
+  "effort": { "medium": 90, "high": 30 },
+  "builtinCommands": { "clear": 10, "model": 5, "effort": 3 },
+  "mcpByType": { "issue-tracker": 200, "browser": 150, "db": 60 }
+}
