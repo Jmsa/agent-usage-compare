@@ -40,7 +40,15 @@ cat usage/you-claude-code.json
 
 # collect everyone's blobs into usage/, then:
 node compare.mjs usage/*.json
+
+# want a visual? add --html for a self-contained dashboard
+node compare.mjs usage/*.json --html              # writes usage-report.html
+node compare.mjs usage/*.json --html=report.html  # or name it yourself
 ```
+
+The `--html` output is a single self-contained file (no external assets, works
+offline, light/dark aware) carrying the same aggregates as the terminal view -
+nothing new leaks. Open it in a browser. It is gitignored.
 
 Requires Node 18+. No dependencies.
 
@@ -57,7 +65,7 @@ is the only per-agent work.
 | `SCHEMA.md` | the safe interchange contract (v1) |
 | `emit-claude-code.mjs` | Claude Code emitter (reads `~/.claude/projects`) |
 | `emit-template.mjs` | starting point for other agents |
-| `compare.mjs` | merge N blobs -> collective view + per-person table |
+| `compare.mjs` | merge N blobs -> collective view + per-person table (`--html` for a dashboard) |
 
 ## Privacy note
 

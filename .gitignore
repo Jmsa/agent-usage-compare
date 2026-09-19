@@ -3,3 +3,6 @@ node_modules/
 # personal usage blobs - share directly, don't commit
 usage/*.json
 !usage/example.json
+
+# generated dashboard
+usage-report.html
